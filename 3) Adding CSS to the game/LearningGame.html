@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <!--Inicio del encabezado-->
+    <head>
+        <meta name="viewport" charset="utf-8" content="     width=device-width, initial-scale=1"/>
+        <title>Battle Beasts</title>
+        <script src="./js/LearningGame.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+
+    <!--Inicio del cuerpo-->
+    <body>
+        <!--Seleccion de mascota-->
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">Battle Beasts!</h1>
+            
+            <h2 class="subtitulo">Elige a tu mascota:</h2>
+
+            <div class="tarjetas">
+                <input type="radio" name="mascota" id="Hipodoge"/>
+                <label class="tarjeta-mokepon" for="Hipodoge">
+                    <P>Hipodoge</P>
+                    <img src="./assets/doge.jpg" alt="">
+                </label>
+
+                <input type="radio" name="mascota" id="Capipepo"/>
+                <label class="tarjeta-mokepon" for="Capipepo">
+                    <p>Capipepo</p>
+                    <img src="./assets/capybara.jpg" alt="">
+                </label>
+
+                <input type="radio" name="mascota" id="Ratigueya"/>
+                <label class="tarjeta-mokepon" for="Ratigueya">
+                    <p>Ratigueya</p>
+                    <img src="./assets/rata.jpg" alt="">
+                </label>
+            </div>
+
+            <button id="Boton-SeleccionarMascota">Seleccionar</button>
+        </section>
+
+        <!--Seleccion de ataque-->
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">Battle Beasts!</h1>
+
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+
+            <div id="ataque-estructura">
+
+                <div id="div-Jugador">
+                    <p id="Mascota-jugador"></p>
+                    <p id="vidas-jugador"></p>
+                    <div id="ataques-jugador"></div>
+                </div>
+
+                <div id="atacar">
+                    <div id="div-botonesAtaques">
+                        <button class="boton-ataque" id="boton-ataquefuego">Fuego 🔥</button>
+                        <button class="boton-ataque" id="boton-ataqueagua">Agua 💧</button>
+                        <button class="boton-ataque" id="boton-ataquetierra">Tierra 🌱</button>
+                    </div>
+                
+                    <div id="mensajes">
+                        <!--Mensajes del juego-->
+                        <p id="notificaciones">Selecciona el ataque!</p>
+        
+                        <!--Boton para reiniciar el juego-->
+                        <section id="reiniciar">
+                            <button id="boton-reiniciar">reiniciar</button>
+                        </section>
+                    </div>
+                </div>
+
+                <div id="div-Enemigo">
+                    <p id="Mascota-enemigo"></p>
+                    <p id="vidas-enemigo"></p>
+                    <div id="ataques-enemigo"></div>
+                </div>
+            </div>
+        </section>
+     </body>
+</html>

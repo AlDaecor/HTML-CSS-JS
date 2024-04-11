@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <!--Inicio del encabezado-->
+    <head>
+        <meta name="viewport" charset="utf-8" content="     width=device-width, initial-scale=1"/>
+        <title>Battle Beasts</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+
+    <!--Inicio del cuerpo-->
+    <body>
+        <!--Seleccion de mascota-->
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">Battle Beasts!</h1>
+            
+            <h2 class="subtitulo">Elige a tu mascota:</h2>
+
+            <div id='contenedorTarjetas' class="tarjetas"></div> <!--Esto se construye en el javascript-->
+
+            <button id="Boton-SeleccionarMascota">Seleccionar</button>
+        </section>
+
+        <!--Seleccion de ataque-->
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">Battle Beasts!</h1>
+
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+
+            <div id="ataque-estructura">
+
+                <div id="div-Jugador">
+                    <p>Tu mascota:</p>
+                    <p id="Mascota-jugador"></p>
+                    <p id="victorias-jugador">victorias: 0</p>
+                    <div id="ataques-jugador"></div>
+                </div>
+
+                <div id="div-botonesAtaques"></div> <!--Esto se construye en el javascript-->
+                
+                <div id="mensajes">
+                    <!--Mensajes del juego-->
+                    <p id="notificaciones">Selecciona el orden de los ataques!</p>
+    
+                    <!--Boton para reiniciar el juego-->
+                    <section id="reiniciar">
+                        <button id="boton-reiniciar">reiniciar</button>
+                    </section>
+                </div>
+
+                <div id="div-Enemigo">
+                    <p id="Titulo-enemigo">La mascota enemiga:</p>
+                    <p id="Mascota-enemigo"></p>
+                    <p id="victorias-enemigo">victorias: 0</p>
+                    <div id="ataques-enemigo"></div>
+                </div>
+            </div>
+        </section>
+        <!--El codigo prioriza la lectura del javascript sobre todo lo demas, y tenerlo al final mejoramos la velocidad de carga-->
+        <script src="./js/LearningGame.js"></script>
+     </body>
+</html>

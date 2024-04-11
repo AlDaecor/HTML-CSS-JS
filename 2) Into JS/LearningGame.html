@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+    <!--Inicio del encabezado-->
+    <head>
+        <meta charset="utf-8" />
+        <title>Battle Beasts</title>
+        <script src="./js/LearningGame.js"></script>
+    </head>
+
+    <!--Inicio del cuerpo-->
+    <body>
+        <h1>Battle Beast! 🔥💧🌱</h1>
+
+        <!--Seleccion de mascota-->
+        <section id="seleccionar-mascota">
+            <h2>Elige a tu mascota:</h2>
+
+            <label for="Hipodoge">Hipodoge</label>
+            <input type="radio" name="mascota" id="Hipodoge"/>
+
+            <label for="Capipepo">Capipepo</label>
+            <input type="radio" name="mascota" id="Capipepo"/>
+
+            <label for="Ratigueya">Ratigueya</label>
+            <input type="radio" name="mascota" id="Ratigueya"/>
+
+            <button id="Boton-SeleccionarMascota">Seleccionar</button>
+        </section>
+
+        <!--Seleccion de ataque-->
+        <section id="seleccionar-ataque">
+            <h2>Elige tu ataque:</h2>
+
+            <p><span id="Mascota-jugador"></span><span id="vidas-jugador"></span></p>
+            <p><span id="Mascota-enemigo"></span><span id="vidas-enemigo"></span></p>
+
+            <p>
+                <button id="boton-ataquefuego">Fuego 🔥</button>
+                <button id="boton-ataqueagua">Agua 💧</button>
+                <button id="boton-ataquetierra">Tierra 🌱</button>
+            </p>
+        </section>
+
+        <!--Mensajes del juego-->
+        <section id="mensajes">
+        </section>
+
+        <!--Boton para reiniciar el juego-->
+        <section id="reiniciar">
+            <button id="boton-reiniciar">reiniciar</button>
+        </section>
+
+     </body>
+
+</html>

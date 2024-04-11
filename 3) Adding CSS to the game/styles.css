@@ -1,0 +1,218 @@
+/*Para definir una clase, se tienen que usar las dobles comillas unicamente*/
+
+/*----------------------IMPORT DE FUENTES------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+
+/*----------------------INFORMACION GENERAL DE LA PAGINA------------------*/
+:root {
+    --Berenjena: #030637;
+    --Violeta: #3C0753;
+    --Mermelada: #720455;
+    --Magenta: #910A67;
+}
+
+body {
+    font-family: 'Single Day', cursive;
+    background: linear-gradient(-45deg, var(--Berenjena), var(--Violeta), var(--Mermelada));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}/*Este segmento se ocupa de controlar el tipo de texto y el color de la pagina*/
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    } 50% {
+        background-position: 100% 50%;
+    } 100% {
+        background-position: 0% 50%;
+    }
+}
+
+.titulo {
+    color: white;
+    font-size: 64px;
+}/*Este segmento se ocupa de controlar el color y tamaño de todos los titulos*/
+
+.subtitulo {
+    color: white;
+    font-size: 42px;
+}/*Este segmento se ocupa de controlar el color y tamaño de todos los subtitulos*/
+
+
+/*----------------------SELECCION DE MASCOTAS UNICAMENTE------------------*/
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}/*Este segmento se ocupa unicamente de la parte de seleccionar la mascota*/
+
+.tarjetas {
+    display: flex;
+    gap: 40px;
+    font-size: 30px;
+}/*Este segmento se ocupa de controlar organizacion y tamaño de las tarjetas*/
+
+.tarjeta-mokepon {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 190px;
+    margin-top:20px;
+    background-color:#3C0753;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 3px solid #030637;
+    border-radius: 20px;
+    gap: 10px;
+}/*Este segmento se ocupa de controlar todas las caracteristicas de las tarjetas*/
+
+.tarjeta-mokepon img {
+    width: 120px;
+    border-radius: 20px;
+}/*Este segmento se ocupa de controlar las imagenes de las tarjetas*/
+
+#Boton-SeleccionarMascota {
+    width: 180px;
+    height: 40px;
+    margin-top: 60px;
+    border-radius: 20px;
+    background-color: #3C0753;
+    border: 2px solid #030637;
+    color: white;
+    font-family: 'Single Day', cursive;
+    font-size: 24px;
+}/*Este segmento se ocupa de controlar el boton del segmento*/
+
+input {
+    display: none;
+}
+
+input:checked + label{
+    background-color: var(--Magenta);
+}/*Este segmento se ocupa de ocultar los circulos de seleccion*/
+
+
+/*----------------------SELECCION DE COMBATE (ELIGE TU ATAQUE)------------------*/
+#seleccionar-ataque {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ataque-estructura {
+    display: grid;
+    grid-template: auto auto /120px 480px 120px;
+}
+
+#div-Jugador {
+    grid-area: 1 / 1 / 3 / 1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    background-color: var(--Mermelada);
+    border: 3px solid var(--Violeta);
+    border-radius: 20px;
+}
+
+#atacar{
+    grid-area: 1 / 2 / 1 / 2;
+    /*Grid-area: (grid-row-start / grid-column-start / grid-row-end / grid-column-end) */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-botonesAtaques {
+    display: flex;
+}
+
+.boton-ataque {
+    color: white;
+    margin: 10px;
+    width: 140px;
+    border: 3px solid var(--Violeta);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Mermelada);
+    font-family: 'Single Day', cursive;
+    font-size: 25px;
+}
+
+#mensajes {
+    grid-area: 1 / 2 / 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 320px;
+    background: var(--Mermelada);
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border:2px solid var(--Violeta);
+    font-size: 20px;
+}
+
+#boton-reiniciar {
+    color: white;
+    border-radius: 20px;
+    background-color: #3C0753;
+    border-color: transparent;
+    font-family: 'Single Day', cursive;
+    font-size: 25px;
+}
+
+#div-Enemigo {
+    grid-area: 1 / 3 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    background-color: var(--Mermelada);
+    border: 3px solid var(--Violeta);
+    border-radius: 20px;
+}
+
+@media (max-width:720px) {
+
+    .tarjetas {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .tarjeta-mokepon {
+        height: 150px;
+        width: 240px;
+    }
+
+    .tarjeta-mokepon img {
+        width: 90px;
+    }
+
+    #ataque-estructura {
+        grid-template: 200px auto/200px 200px;
+        gap:30px;
+    }
+
+    #div-Jugador {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    #atacar {
+        grid-area: 1 / 1 / 2 / 3
+    }
+
+    #div-Enemigo {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
